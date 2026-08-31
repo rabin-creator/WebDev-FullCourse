@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Basics Practice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 80px;
+      background-color: #121212;
+      color: #ffffff;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007acc;
+      color: white;
+      cursor: pointer;
+    }
+    .highlight {
+      color: #00ff88;
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="main-heading">Hello, DOM!</h1>
+  <p class="description">This is our initial text content.</p>
+  
+  <div>
+    <button id="change-text-btn">Change Text</button>
+    <button id="style-btn">Toggle Style</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
