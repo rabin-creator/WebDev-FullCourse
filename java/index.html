@@ -2,44 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DOM Basics Practice</title>
+  <title>DOM Task Manager with Filters</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 80px;
-      background-color: #121212;
-      color: #ffffff;
-    }
-    button {
-      padding: 10px 20px;
-      margin: 10px;
-      font-size: 16px;
-      border: none;
-      border-radius: 5px;
-      background-color: #007acc;
-      color: white;
-      cursor: pointer;
-    }
-    .highlight {
-      color: #00ff88;
-      font-size: 2rem;
-    }
+    body { font-family: sans-serif; max-width: 450px; margin: 40px auto; }
+    .completed { text-decoration: line-through; opacity: 0.6; }
+    li { display: flex; justify-content: space-between; margin: 8px 0; }
+    .controls { display: flex; gap: 8px; margin: 15px 0; }
   </style>
 </head>
 <body>
-
-  <h1 id="main-heading">Hello, DOM!</h1>
-  <p class="description">This is our initial text content.</p>
+  <h2>Task Tracker</h2>
   
-  <div>
-    <button id="change-text-btn">Change Text</button>
-    <button id="style-btn">Toggle Style</button>
+  <form id="task-form">
+    <input type="text" id="task-input" placeholder="Enter new task..." required>
+    <button type="submit">Add Task</button>
+  </form>
+
+  <div class="controls">
+    <input type="text" id="search-input" placeholder="Search tasks...">
+    <button id="filter-all">All</button>
+    <button id="filter-active">Active</button>
+    <button id="filter-completed">Completed</button>
   </div>
 
-  <script src="script.js"></script>
+  <ul id="task-list"></ul>
+
+  <script src="app.js"></script>
 </body>
 </html>
