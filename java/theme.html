@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Theme Switcher</title>
+  <style>
+    /* CSS Variables for Dynamic Theming */
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #1a1a1a;
+      --card-bg: #f0f0f0;
+      --accent: #2563eb;
+    }
+
+    [data-theme="dark"] {
+      --bg-color: #121212;
+      --text-color: #f0f0f0;
+      --card-bg: #1e1e1e;
+      --accent: #60a5fa;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: sans-serif;
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    button {
+      background-color: var(--accent);
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>Theme Switcher Demo</h2>
+  <button id="theme-toggle">Switch Theme</button>
+
+  <div class="card">
+    <h3>Dynamic Content Card</h3>
+    <p>This card updates its appearance seamlessly based on the active CSS custom properties.</p>
+  </div>
+
+  <script src="theme.js"></script>
+</body>
+</html>
