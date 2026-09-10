@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Accordion FAQ</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 450px;
+      margin: 50px auto;
+    }
+    .accordion-item {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+    .accordion-title {
+      background: #f1f1f1;
+      padding: 12px 15px;
+      margin: 0;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      user-select: none;
+    }
+    .accordion-content {
+      display: none;
+      padding: 12px 15px;
+      background: #fff;
+    }
+    .accordion-item.active .accordion-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="accordion-item">
+    <h3 class="accordion-title">What is Git? <span>+</span></h3>
+    <div class="accordion-content">
+      <p>Git is a distributed version control system that tracks changes in source code.</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h3 class="accordion-title">What is the DOM? <span>+</span></h3>
+    <div class="accordion-content">
+      <p>The Document Object Model represents the structure of a document as a tree of objects.</p>
+    </div>
+  </div>
+
+  <script src="accordion.js"></script>
+</body>
+</html>
