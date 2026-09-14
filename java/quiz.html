@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Quiz App</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 450px;
+      margin: 50px auto;
+      text-align: center;
+    }
+    .quiz-card {
+      border: 1px solid #ddd;
+      padding: 25px;
+      border-radius: 8px;
+      background: #f9f9f9;
+    }
+    .options-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    button.option-btn {
+      padding: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background: white;
+    }
+    button.option-btn:hover {
+      background: #e2e8f0;
+    }
+    .hidden {
+      display: none;
+    }
+    #next-btn, #restart-btn {
+      margin-top: 15px;
+      padding: 10px 20px;
+      cursor: pointer;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="quiz-card">
+    <div id="quiz-box">
+      <h3 id="question-text">Question goes here</h3>
+      <div id="options" class="options-container"></div>
+      <button id="next-btn" class="hidden">Next Question</button>
+    </div>
+
+    <div id="result-box" class="hidden">
+      <h2>Quiz Finished!</h2>
+      <p id="score-text"></p>
+      <button id="restart-btn">Try Again</button>
+    </div>
+  </div>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
