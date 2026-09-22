@@ -1,16 +1,40 @@
-// 1. Selecting Elements from the DOM
-const mainHeading = document.querySelector('#main-heading');
-const description = document.querySelector('.description');
-const changeTextBtn = document.querySelector('#change-text-btn');
-const styleBtn = document.querySelector('#style-btn');
+// 1. Select DOM Elements
+const taskInput = document.querySelector('#task-input');
+const addBtn = document.querySelector('#add-btn');
+const taskList = document.querySelector('#task-list');
 
-// 2. Event Listener to modify text
-changeTextBtn.addEventListener('click', () => {
-  mainHeading.textContent = "DOM Manipulation Mastered!";
-  description.textContent = "You clicked the first button to update inner text.";
-});
+// 2. Function to Add a New Task
+function addTask() {
+  const taskText = taskInput.value.trim();
 
-// 3. Event Listener to toggle CSS class
-styleBtn.addEventListener('click', () => {
-  mainHeading.classList.toggle('highlight');
+  // Prevent adding empty tasks
+  if (taskText === "") {
+    alert("Please enter a task!");
+    return;
+  }
+
+  // Create a new <li> element
+  const li = document.createElement('li');
+  li.textContent = taskText;
+
+  // Click on task to delete it
+  li.addEventListener('click', () => {
+    li.remove();
+  });
+
+  // Append <li> to the <ul>
+  taskList.appendChild(li);
+
+  // Clear input field
+  taskInput.value = "";
+}
+
+// 3. Event Listeners
+addBtn.addEventListener('click', addTask);
+
+// Support pressing "Enter" key to add task
+taskInput.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    addTask();
+  }
 });
