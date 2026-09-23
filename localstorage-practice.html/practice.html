@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Theme & Color Switcher</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 80px;
+      transition: background-color 0.3s, color 0.3s;
+      background-color: #121212;
+      color: #ffffff;
+    }
+    .card {
+      display: inline-block;
+      padding: 30px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+    .control-group {
+      margin: 20px 0;
+    }
+    input[type="color"] {
+      border: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      background-color: #007acc;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1 id="title">Theme Customizer</h1>
+    <p id="status-text">Pick a custom background color or toggle dark mode.</p>
+
+    <div class="control-group">
+      <label for="color-picker">Choose Background Color: </label>
+      <input type="color" id="color-picker" value="#121212">
+    </div>
+
+    <div class="control-group">
+      <button id="reset-btn">Reset Color</button>
+    </div>
+  </div>
+
+  <script src="practice-script.js"></script>
+</body>
+</html>
