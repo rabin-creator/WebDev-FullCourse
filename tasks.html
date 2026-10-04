@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task Manager</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 480px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+    .card {
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 8px;
+      background: #fafafa;
+    }
+    .input-group {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 15px;
+    }
+    input[type="text"] {
+      flex: 1;
+      padding: 8px;
+      font-size: 1rem;
+    }
+    select, button {
+      padding: 8px 12px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+    .add-btn {
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background: white;
+      border: 1px solid #e2e8f0;
+      padding: 10px 12px;
+      margin-bottom: 8px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    li.completed span.task-text {
+      text-decoration: line-through;
+      color: #94a3b8;
+    }
+    .tag {
+      font-size: 0.75rem;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: bold;
+      margin-left: 8px;
+    }
+    .tag.High { background: #fee2e2; color: #dc2626; }
+    .tag.Medium { background: #fef3c7; color: #d97706; }
+    .tag.Low { background: #dcfce7; color: #16a34a; }
+    .actions {
+      display: flex;
+      gap: 6px;
+    }
+    .btn-action {
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Task Manager</h2>
+
+    <div class="input-group">
+      <input type="text" id="task-input" placeholder="Add a new task...">
+      <select id="priority-select">
+        <option value="Low">Low</option>
+        <option value="Medium" selected>Medium</option>
+        <option value="High">High</option>
+      </select>
+      <button id="add-btn" class="add-btn">Add</button>
+    </div>
+
+    <ul id="task-list"></ul>
+  </div>
+
+  <script src="tasks.js"></script>
+</body>
+</html>
