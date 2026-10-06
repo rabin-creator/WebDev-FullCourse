@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Debounced Live Search</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 450px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+    .card {
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 8px;
+      background: #fafafa;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      padding: 10px;
+      background: white;
+      border: 1px solid #e2e8f0;
+      margin-bottom: 6px;
+      border-radius: 4px;
+    }
+    .no-results {
+      color: #94a3b8;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Live Search</h2>
+    <input type="text" id="search-input" placeholder="Search programming languages...">
+
+    <ul id="results-list"></ul>
+  </div>
+
+  <script src="search.js"></script>
+</body>
+</html>
