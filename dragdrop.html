@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Drag and Drop Reorderable List</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 450px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+    .card {
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 8px;
+      background: #fafafa;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      background: white;
+      border: 1px solid #cbd5e1;
+      padding: 12px 16px;
+      margin-bottom: 8px;
+      border-radius: 6px;
+      cursor: grab;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    li.dragging {
+      opacity: 0.5;
+      border-dash: 2px dashed #2563eb;
+      background: #eff6ff;
+    }
+    li.drag-over {
+      border-top: 3px solid #2563eb;
+    }
+    .handle {
+      color: #94a3b8;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Reorderable Priorities</h2>
+    <ul id="draggable-list">
+      <li draggable="true"><span>1. Complete DOM Mini-Projects</span> <span class="handle">☰</span></li>
+      <li draggable="true"><span>2. Practice Data Structures in C++</span> <span class="handle">☰</span></li>
+      <li draggable="true"><span>3. Build Full-Stack Portfolio</span> <span class="handle">☰</span></li>
+      <li draggable="true"><span>4. Review DevOps Fundamentals</span> <span class="handle">☰</span></li>
+    </ul>
+  </div>
+
+  <script src="dragdrop.js"></script>
+</body>
+</html>
